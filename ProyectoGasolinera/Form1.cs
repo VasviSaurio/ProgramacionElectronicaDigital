@@ -50,6 +50,9 @@ namespace ProyectoGasolinera
             {
                 puertoSerial.PortName = cbPuertosDisponibles.Text;
                 puertoSerial.Open();
+                btnAbastecimientoBombas.Enabled = true;
+                btnRealizarPedidoGasolina.Enabled = true;
+                btnReportesYCierres.Enabled = true;
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
