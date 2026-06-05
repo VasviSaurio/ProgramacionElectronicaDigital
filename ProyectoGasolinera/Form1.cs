@@ -174,6 +174,45 @@ namespace ProyectoGasolinera
             });
             comunicacion.EnviarMensajeJSON(mensaje);
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+                // Generar cierre de caja del día
+                central.GenerarCierreCaja();
+
+                // Mostrar en un MessageBox
+                MessageBox.Show("Cierre de caja generado. Revisa consola o archivo.");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            // Leer registros desde archivo JSON
+            List<RegistroAbastecimiento> registros = GestorArchivos.LeerRegistros();
+
+            if (registros.Count == 0)
+            {
+                MessageBox.Show("No hay registros previos.");
+                return;
+            }
+
+            // Agrupar por fecha (día)
+            var cierres = registros
+                .GroupBy(r => r.Fecha.Date)
+                .Select(g => new
+                {
+                    Fecha = g.Key,
+                    TotalDia = g.Sum(r => r.Monto),
+                    Abastecimientos = g.Count()
+                });
+
+            // Mostrar resultados en consola y DataGridView
+            //dgvCierres.Rows.Clear();
+            foreach (var cierre in cierres)
+            {
+                //dgvCierres.Rows.Add(cierre.Fecha, cierre.Abastecimientos, cierre.TotalDia);
+                Console.WriteLine($"Fecha: {cierre.Fecha} | Abastecimientos: {cierre.Abastecimientos} | Total: Q{cierre.TotalDia}");
+            }
+        }
     }
     }
-}
