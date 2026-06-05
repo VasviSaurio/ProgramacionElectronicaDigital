@@ -38,7 +38,7 @@ namespace ProyectoGasolinera.CLASES
         {
             fechaYHoraActual = DateTime.Now;
             CantidadCobrada = precioGasolina * bombaSolicitada.LitrosDespachados;
-            despachosDelDía.Add(this);
+            
         }
     }
 }

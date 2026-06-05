@@ -13,11 +13,31 @@ namespace ProyectoGasolinera.CLASES
         private int idBomba;
         private double litrosSolicitados;
         private double litrosDespachados;
+        private string configuracionBomba;
+        private TipoDespacho tipo;
 
+        public TipoDespacho Tipo
+        {
+            get => tipo;
+            set => tipo = value;
+        }
+        public enum TipoDespacho
+        {
+            Prepago,
+            TanqueLleno
+        }
         public Bomba(int idBomba, double litrosSolicitados)
         {
             this.idBomba = idBomba;
             this.litrosSolicitados = litrosSolicitados;
+            if (litrosSolicitados != -1)
+            {
+                configuracionBomba = "TANQUE LLENO";
+            }
+            else
+            {
+                configuracionBomba = "PREPAGO";
+            }
             litrosDespachados = 0;
         }
         public Bomba()
@@ -31,6 +51,8 @@ namespace ProyectoGasolinera.CLASES
 
         public int IdBomba { get => idBomba; set => idBomba = value; }
         public double LitrosDespachados { get => litrosDespachados; set => litrosDespachados = value; }
+        public string ConfiguracionBomba { get => configuracionBomba; set => configuracionBomba = value; }
+
         public void setLitrosSolicitados(double lt)
         {
             litrosSolicitados = lt;
