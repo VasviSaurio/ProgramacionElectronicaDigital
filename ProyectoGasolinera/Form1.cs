@@ -243,7 +243,13 @@ namespace ProyectoGasolinera
 
 
                 string linea = $"NIT: {nitCliente} | Cliente: {nombreCLiente} | Bomba: {bombaElegida} | Tipo: {tipoAbastecimiento} | Litros: {cantidadLitros}";
-                
+
+                Cliente cliente = new Cliente(nombreCLiente, nitCliente);
+
+
+
+
+
             }
             else
             {
@@ -265,6 +271,25 @@ namespace ProyectoGasolinera
             {
                 txtNitCliente.Enabled = true;
                 txtNombreCliente.Enabled = true;
+            }
+        }
+
+        private void cbTipoAbstecimiento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTipoAbstecimiento.SelectedIndex == 0)
+            {
+                txtCantidadLitrosGasolina.Text = "-1";
+                txtCantidadEfectivoPorCobrar.Text = "0";
+                txtCantidadLitrosGasolina.Enabled = false;
+                txtCantidadEfectivoPorCobrar.Enabled = false;
+
+            }
+            else
+            {
+                txtCantidadLitrosGasolina.Text = "00";
+                txtCantidadEfectivoPorCobrar.Text = "00";
+                txtCantidadLitrosGasolina.Enabled = true;
+                txtCantidadEfectivoPorCobrar.Enabled = true;
             }
         }
     }

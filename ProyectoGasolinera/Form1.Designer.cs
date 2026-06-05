@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabBienvenida = new System.Windows.Forms.TabPage();
             this.tabVentaGasolina = new System.Windows.Forms.TabPage();
@@ -593,6 +593,7 @@
             this.cbTipoAbstecimiento.Name = "cbTipoAbstecimiento";
             this.cbTipoAbstecimiento.Size = new System.Drawing.Size(226, 32);
             this.cbTipoAbstecimiento.TabIndex = 21;
+            this.cbTipoAbstecimiento.SelectedIndexChanged += new System.EventHandler(this.cbTipoAbstecimiento_SelectedIndexChanged);
             // 
             // btnSolicitarDespacho
             // 
@@ -927,16 +928,16 @@
             // 
             // graficaDeUsoDeBombas
             // 
-            chartArea1.Name = "ChartArea1";
-            this.graficaDeUsoDeBombas.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.graficaDeUsoDeBombas.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.graficaDeUsoDeBombas.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.graficaDeUsoDeBombas.Legends.Add(legend2);
             this.graficaDeUsoDeBombas.Location = new System.Drawing.Point(360, 56);
             this.graficaDeUsoDeBombas.Name = "graficaDeUsoDeBombas";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.graficaDeUsoDeBombas.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.graficaDeUsoDeBombas.Series.Add(series2);
             this.graficaDeUsoDeBombas.Size = new System.Drawing.Size(214, 133);
             this.graficaDeUsoDeBombas.TabIndex = 15;
             this.graficaDeUsoDeBombas.Text = "chart1";
@@ -1034,9 +1035,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabBienvenida;
         private System.Windows.Forms.TabPage tabVentaGasolina;

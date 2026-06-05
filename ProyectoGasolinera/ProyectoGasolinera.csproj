@@ -56,7 +56,6 @@
     <Compile Include="CLASES\ComunicacionSerial.cs" />
     <Compile Include="CLASES\Despacho.cs" />
     <Compile Include="CLASES\GestorArchivos.cs" />
-    <Compile Include="CLASES\GestorClientes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

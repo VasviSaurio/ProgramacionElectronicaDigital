@@ -1,32 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectoGasolinera.CLASES
 {
-    internal class Bomba
+    public class Bomba
     {
-        public bool Disponible { get; set; }
-        public int TotalUsos { get; private set; }
+        private int idBomba;
+        private double litrosSolicitados;
+        private string tipoAbastecimiento;
+        private double litrosDespachados;
 
+        public Bomba(int idBomba, double litrosSolicitados, string tipoAbastecimiento)
+        {
+            this.idBomba = idBomba;
+            this.litrosSolicitados = litrosSolicitados;
+            this.tipoAbastecimiento = tipoAbastecimiento;
+            litrosDespachados = 0;
+        }
         public Bomba()
         {
-            Disponible = true;
-            TotalUsos = 0;
+            idBomba = 1;
+            litrosSolicitados = 0;
+            litrosDespachados = 0;
+            //TANQUE LLENO
+            //PREPAGO
+            tipoAbastecimiento = "TANQUE LLENO";
         }
 
-        public void IniciarAbastecimiento()
+        public int IdBomba { get => idBomba; set => idBomba = value; }
+        public double LitrosSolicitados { get => litrosSolicitados; set => litrosSolicitados = value; }
+        public string TipoAbastecimiento { get => tipoAbastecimiento; set => tipoAbastecimiento = value; }
+        public double LitrosDespachados { get => litrosDespachados; set => litrosDespachados = value; }
+
+        public void iniciarDespacho(SerialPort puerto)
         {
-            if (Disponible)
+            try
             {
-                TotalUsos++;
-                Console.WriteLine("Abastecimiento iniciado en la bomba.");
+                if (puerto.IsOpen)
+                {
+                    puerto.WriteLine("MENSAJE");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("La bomba no está disponible.");
+                MessageBox.Show(ex.Message);
             }
         }
     }

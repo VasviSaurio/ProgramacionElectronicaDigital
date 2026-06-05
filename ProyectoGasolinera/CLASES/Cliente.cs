@@ -7,10 +7,17 @@ using static ProyectoGasolinera.CLASES.GestorArchivos;
 
 namespace ProyectoGasolinera.CLASES
 {
-    internal class Cliente
+    public class Cliente
     {
         public string Nombre { get; set; }
         public string NIT { get; set; }
-
+        public Cliente(string nombre, string nit) {
+            Nombre = nombre;
+            NIT = nit;
+        }
+        public Cliente() {
+            Nombre = "N/A";
+            NIT = "CF";
+        }
     }
 }
