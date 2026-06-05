@@ -50,7 +50,6 @@
     <Compile Include="CLASES\Bomba.cs" />
     <Compile Include="CLASES\Central.cs" />
     <Compile Include="CLASES\Cliente.cs" />
-    <Compile Include="CLASES\Comunicacion.cs" />
     <Compile Include="CLASES\ComunicacionSerial.cs" />
     <Compile Include="CLASES\Despachador.cs" />
     <Compile Include="CLASES\GestorArchivos.cs" />
