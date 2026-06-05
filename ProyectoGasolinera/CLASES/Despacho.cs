@@ -40,5 +40,9 @@ namespace ProyectoGasolinera.CLASES
             CantidadCobrada = precioGasolina * bombaSolicitada.LitrosDespachados;
             
         }
+        public string getIdDespacho()
+        {
+            return clienteSolicitado.NIT + clienteSolicitado.Nombre;
+        }
     }
 }
