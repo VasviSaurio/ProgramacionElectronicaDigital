@@ -146,6 +146,11 @@ namespace ProyectoGasolinera
         {
             tabControl2.SelectedTab = tabReportes;
         }
+
+        private void tabAbastecimientos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
