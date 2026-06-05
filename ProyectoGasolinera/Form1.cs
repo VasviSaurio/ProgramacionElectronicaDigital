@@ -36,6 +36,9 @@ namespace ProyectoGasolinera
         private void btnObtenerPuertosDisponibles_Click(object sender, EventArgs e)
         {
             btnCerrarPuerto.Enabled = false;
+            btnAbastecimientoBombas.Enabled = false;
+            btnRealizarPedidoGasolina.Enabled = false;
+            btnReportesYCierres.Enabled = false;
             string[] puertos = SerialPort.GetPortNames();
             cbPuertosDisponibles.Items.AddRange(puertos);
             cbPuertosDisponibles.SelectedIndex = 0;
@@ -48,8 +51,10 @@ namespace ProyectoGasolinera
 
             try
             {
+                puertoSerial = new SerialPort();
                 puertoSerial.PortName = cbPuertosDisponibles.Text;
                 puertoSerial.Open();
+
                 btnAbastecimientoBombas.Enabled = true;
                 btnRealizarPedidoGasolina.Enabled = true;
                 btnReportesYCierres.Enabled = true;
@@ -90,6 +95,9 @@ namespace ProyectoGasolinera
             try
             {
                 puertoSerial.Close();
+                btnAbastecimientoBombas.Enabled = false;
+                btnRealizarPedidoGasolina.Enabled = false;
+                btnReportesYCierres.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -153,6 +161,111 @@ namespace ProyectoGasolinera
         private void tabAbastecimientos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCantidadLitrosGasolina_Enter(object sender, EventArgs e)
+        {
+            if (txtCantidadLitrosGasolina.TextLength > 0)
+            {
+                double cantidadLitros = Convert.ToDouble(txtCantidadLitrosGasolina.Text);
+                double precioGasolina = Convert.ToDouble(txtPrecioGasolinaDeHoy.Text);
+                txtCantidadEfectivoPorCobrar.Text = Math.Round((cantidadLitros * precioGasolina), 2).ToString();
+            }
+                
+        }
+
+        private void txtCantidadEfectivoPorCobrar_Enter(object sender, EventArgs e)
+        {
+            if (txtCantidadLitrosGasolina.TextLength >0)
+            {
+                double cantidadMonto = Convert.ToDouble(txtCantidadEfectivoPorCobrar.Text);
+                double precioGasolina = Convert.ToDouble(txtPrecioGasolinaDeHoy.Text);
+                txtCantidadLitrosGasolina.Text = Math.Round((cantidadMonto / precioGasolina), 2).ToString();
+            }
+            
+        }
+
+        private void txtCantidadLitrosGasolina_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtCantidadEfectivoPorCobrar_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtCantidadEfectivoPorCobrar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (txtCantidadEfectivoPorCobrar.TextLength > 0)
+                {
+                    double cantidadMonto = Convert.ToDouble(txtCantidadEfectivoPorCobrar.Text);
+                    double precioGasolina = Convert.ToDouble(txtPrecioGasolinaDeHoy.Text);
+                    txtCantidadLitrosGasolina.Text = Math.Round((cantidadMonto / precioGasolina), 2).ToString();
+                }
+            }
+        }
+
+        private void txtCantidadLitrosGasolina_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (txtCantidadLitrosGasolina.TextLength > 0)
+                {
+                    double cantidadLitros = Convert.ToDouble(txtCantidadLitrosGasolina.Text);
+                    double precioGasolina = Convert.ToDouble(txtPrecioGasolinaDeHoy.Text);
+                    txtCantidadEfectivoPorCobrar.Text = Math.Round((cantidadLitros * precioGasolina), 2).ToString();
+                }
+            }
+        }
+
+        private void btnSolicitarDespacho_Click(object sender, EventArgs e)
+        {
+            if ((checkBoxCF.Checked || (txtNitCliente.TextLength > 0 && txtNombreCliente.TextLength > 0)) && cbBombasDisponibles.SelectedIndex>-1 && cbTipoAbstecimiento.SelectedIndex>-1 && txtCantidadLitrosGasolina.TextLength>0)
+            {
+                string nitCliente = txtNitCliente.Text;
+                string nombreCLiente = txtNombreCliente.Text;
+                string bombaElegida = cbBombasDisponibles.SelectedItem.ToString();
+                string tipoAbastecimiento = cbTipoAbstecimiento.SelectedItem.ToString();
+                string cantidadLitros = txtCantidadLitrosGasolina.Text;
+
+                MessageBox.Show(
+                $"NIT Cliente: {nitCliente}\n" +
+                $"Nombre Cliente: {nombreCLiente}\n" +
+                $"Bomba Elegida: {bombaElegida}\n" +
+                $"Tipo de Abastecimiento: {tipoAbastecimiento}\n" +
+                $"Cantidad de Litros: {cantidadLitros}",
+                "Datos ingresados",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+                );
+
+
+                string linea = $"NIT: {nitCliente} | Cliente: {nombreCLiente} | Bomba: {bombaElegida} | Tipo: {tipoAbastecimiento} | Litros: {cantidadLitros}";
+                
+            }
+            else
+            {
+                MessageBox.Show("Rellene los datos");
+
+            }
+        }
+
+        private void checkBoxCF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCF.Checked)
+            {
+                txtNombreCliente.Text = "N/A";
+                txtNitCliente.Text = "CF";
+                txtNitCliente.Enabled = false;
+                txtNombreCliente.Enabled = false;
+            }
+            else
+            {
+                txtNitCliente.Enabled = true;
+                txtNombreCliente.Enabled = true;
+            }
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabBienvenida = new System.Windows.Forms.TabPage();
             this.tabVentaGasolina = new System.Windows.Forms.TabPage();
@@ -51,67 +51,67 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tablaAbastecimientosActuales = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrarCaja = new System.Windows.Forms.Button();
             this.btnVerReportesYCierres = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNitCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.checkBoxCF = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbBombas = new System.Windows.Forms.ComboBox();
+            this.cbBombasDisponibles = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCantidadEfectivoPorCobrar = new System.Windows.Forms.TextBox();
+            this.txtCantidadLitrosGasolina = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbTipoAbstecimiento = new System.Windows.Forms.ComboBox();
+            this.btnSolicitarDespacho = new System.Windows.Forms.Button();
+            this.txtPrecioGasolinaDeHoy = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listaDespachosBomba1 = new System.Windows.Forms.ListBox();
+            this.listaDespachosBomba2 = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnIniciarDespachoBomba1 = new System.Windows.Forms.Button();
+            this.btnDetenerDespachoBomba1 = new System.Windows.Forms.Button();
+            this.txtProgresoLitrosBomba1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtProgresoMontoBomba1 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.btnRealizarCobroBomba1 = new System.Windows.Forms.Button();
+            this.txtIdDespachoBomba1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtIdDespachoBomba2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.btnRealizarCobroBomba2 = new System.Windows.Forms.Button();
+            this.txtProgresoMontoBomba2 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtProgresoLitrosBomba2 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnDetenerDespachoBomba2 = new System.Windows.Forms.Button();
+            this.btnIniciarDespachoBomba2 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tablaCierresPasados = new System.Windows.Forms.DataGridView();
             this.label24 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tablaAbastecimientosPasados = new System.Windows.Forms.DataGridView();
             this.label25 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cbSeleccionDeFiltro = new System.Windows.Forms.ComboBox();
+            this.graficaDeUsoDeBombas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtBombaMásUsada = new System.Windows.Forms.TextBox();
+            this.txtBombaMenosUsada = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnCargarDatosDeFiltro = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabBienvenida.SuspendLayout();
             this.tabVentaGasolina.SuspendLayout();
@@ -119,10 +119,10 @@
             this.tabAbastecimientos.SuspendLayout();
             this.tabSeleccionReportesYCierres.SuspendLayout();
             this.tabReportes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaAbastecimientosActuales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaCierresPasados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaAbastecimientosPasados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficaDeUsoDeBombas)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl2
@@ -162,23 +162,23 @@
             // 
             this.tabVentaGasolina.Controls.Add(this.label12);
             this.tabVentaGasolina.Controls.Add(this.button5);
-            this.tabVentaGasolina.Controls.Add(this.textBox4);
+            this.tabVentaGasolina.Controls.Add(this.txtPrecioGasolinaDeHoy);
             this.tabVentaGasolina.Controls.Add(this.label11);
-            this.tabVentaGasolina.Controls.Add(this.button1);
+            this.tabVentaGasolina.Controls.Add(this.btnSolicitarDespacho);
             this.tabVentaGasolina.Controls.Add(this.label10);
-            this.tabVentaGasolina.Controls.Add(this.comboBox1);
-            this.tabVentaGasolina.Controls.Add(this.textBox3);
-            this.tabVentaGasolina.Controls.Add(this.textBox5);
+            this.tabVentaGasolina.Controls.Add(this.cbTipoAbstecimiento);
+            this.tabVentaGasolina.Controls.Add(this.txtCantidadLitrosGasolina);
+            this.tabVentaGasolina.Controls.Add(this.txtCantidadEfectivoPorCobrar);
             this.tabVentaGasolina.Controls.Add(this.label9);
             this.tabVentaGasolina.Controls.Add(this.label8);
             this.tabVentaGasolina.Controls.Add(this.label7);
-            this.tabVentaGasolina.Controls.Add(this.cbBombas);
+            this.tabVentaGasolina.Controls.Add(this.cbBombasDisponibles);
             this.tabVentaGasolina.Controls.Add(this.label6);
-            this.tabVentaGasolina.Controls.Add(this.checkBox1);
+            this.tabVentaGasolina.Controls.Add(this.checkBoxCF);
             this.tabVentaGasolina.Controls.Add(this.label5);
-            this.tabVentaGasolina.Controls.Add(this.textBox2);
+            this.tabVentaGasolina.Controls.Add(this.txtNombreCliente);
             this.tabVentaGasolina.Controls.Add(this.label4);
-            this.tabVentaGasolina.Controls.Add(this.textBox1);
+            this.tabVentaGasolina.Controls.Add(this.txtNitCliente);
             this.tabVentaGasolina.Controls.Add(this.label3);
             this.tabVentaGasolina.Controls.Add(this.btnRegresarAlInicio);
             this.tabVentaGasolina.Location = new System.Drawing.Point(4, 22);
@@ -290,28 +290,28 @@
             // 
             // tabAbastecimientos
             // 
-            this.tabAbastecimientos.Controls.Add(this.textBox9);
+            this.tabAbastecimientos.Controls.Add(this.txtIdDespachoBomba2);
             this.tabAbastecimientos.Controls.Add(this.label20);
-            this.tabAbastecimientos.Controls.Add(this.button9);
-            this.tabAbastecimientos.Controls.Add(this.textBox10);
+            this.tabAbastecimientos.Controls.Add(this.btnRealizarCobroBomba2);
+            this.tabAbastecimientos.Controls.Add(this.txtProgresoMontoBomba2);
             this.tabAbastecimientos.Controls.Add(this.label21);
-            this.tabAbastecimientos.Controls.Add(this.textBox11);
+            this.tabAbastecimientos.Controls.Add(this.txtProgresoLitrosBomba2);
             this.tabAbastecimientos.Controls.Add(this.label22);
-            this.tabAbastecimientos.Controls.Add(this.button10);
-            this.tabAbastecimientos.Controls.Add(this.button11);
-            this.tabAbastecimientos.Controls.Add(this.textBox8);
+            this.tabAbastecimientos.Controls.Add(this.btnDetenerDespachoBomba2);
+            this.tabAbastecimientos.Controls.Add(this.btnIniciarDespachoBomba2);
+            this.tabAbastecimientos.Controls.Add(this.txtIdDespachoBomba1);
             this.tabAbastecimientos.Controls.Add(this.label19);
-            this.tabAbastecimientos.Controls.Add(this.button8);
-            this.tabAbastecimientos.Controls.Add(this.textBox7);
+            this.tabAbastecimientos.Controls.Add(this.btnRealizarCobroBomba1);
+            this.tabAbastecimientos.Controls.Add(this.txtProgresoMontoBomba1);
             this.tabAbastecimientos.Controls.Add(this.label18);
-            this.tabAbastecimientos.Controls.Add(this.textBox6);
+            this.tabAbastecimientos.Controls.Add(this.txtProgresoLitrosBomba1);
             this.tabAbastecimientos.Controls.Add(this.label17);
-            this.tabAbastecimientos.Controls.Add(this.button7);
-            this.tabAbastecimientos.Controls.Add(this.button6);
+            this.tabAbastecimientos.Controls.Add(this.btnDetenerDespachoBomba1);
+            this.tabAbastecimientos.Controls.Add(this.btnIniciarDespachoBomba1);
             this.tabAbastecimientos.Controls.Add(this.label16);
             this.tabAbastecimientos.Controls.Add(this.label15);
-            this.tabAbastecimientos.Controls.Add(this.listBox2);
-            this.tabAbastecimientos.Controls.Add(this.listBox1);
+            this.tabAbastecimientos.Controls.Add(this.listaDespachosBomba2);
+            this.tabAbastecimientos.Controls.Add(this.listaDespachosBomba1);
             this.tabAbastecimientos.Controls.Add(this.panel1);
             this.tabAbastecimientos.Controls.Add(this.label14);
             this.tabAbastecimientos.Controls.Add(this.label13);
@@ -329,7 +329,7 @@
             this.tabSeleccionReportesYCierres.Controls.Add(this.btnVerReportesYCierres);
             this.tabSeleccionReportesYCierres.Controls.Add(this.btnCerrarCaja);
             this.tabSeleccionReportesYCierres.Controls.Add(this.label2);
-            this.tabSeleccionReportesYCierres.Controls.Add(this.dataGridView1);
+            this.tabSeleccionReportesYCierres.Controls.Add(this.tablaAbastecimientosActuales);
             this.tabSeleccionReportesYCierres.Controls.Add(this.button3);
             this.tabSeleccionReportesYCierres.Location = new System.Drawing.Point(4, 22);
             this.tabSeleccionReportesYCierres.Name = "tabSeleccionReportesYCierres";
@@ -340,18 +340,18 @@
             // 
             // tabReportes
             // 
-            this.tabReportes.Controls.Add(this.button12);
-            this.tabReportes.Controls.Add(this.textBox13);
+            this.tabReportes.Controls.Add(this.btnCargarDatosDeFiltro);
+            this.tabReportes.Controls.Add(this.txtBombaMenosUsada);
             this.tabReportes.Controls.Add(this.label27);
-            this.tabReportes.Controls.Add(this.textBox12);
+            this.tabReportes.Controls.Add(this.txtBombaMásUsada);
             this.tabReportes.Controls.Add(this.label26);
-            this.tabReportes.Controls.Add(this.chart1);
-            this.tabReportes.Controls.Add(this.comboBox2);
+            this.tabReportes.Controls.Add(this.graficaDeUsoDeBombas);
+            this.tabReportes.Controls.Add(this.cbSeleccionDeFiltro);
             this.tabReportes.Controls.Add(this.label25);
             this.tabReportes.Controls.Add(this.label24);
-            this.tabReportes.Controls.Add(this.dataGridView3);
+            this.tabReportes.Controls.Add(this.tablaAbastecimientosPasados);
             this.tabReportes.Controls.Add(this.label23);
-            this.tabReportes.Controls.Add(this.dataGridView2);
+            this.tabReportes.Controls.Add(this.tablaCierresPasados);
             this.tabReportes.Controls.Add(this.button4);
             this.tabReportes.Location = new System.Drawing.Point(4, 22);
             this.tabReportes.Name = "tabReportes";
@@ -400,13 +400,13 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dataGridView1
+            // tablaAbastecimientosActuales
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(560, 277);
-            this.dataGridView1.TabIndex = 7;
+            this.tablaAbastecimientosActuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaAbastecimientosActuales.Location = new System.Drawing.Point(17, 37);
+            this.tablaAbastecimientosActuales.Name = "tablaAbastecimientosActuales";
+            this.tablaAbastecimientosActuales.Size = new System.Drawing.Size(560, 277);
+            this.tablaAbastecimientosActuales.TabIndex = 7;
             // 
             // label2
             // 
@@ -446,13 +446,13 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "DATOS DEL CLIENTE:";
             // 
-            // textBox1
+            // txtNitCliente
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(69, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 29);
-            this.textBox1.TabIndex = 7;
+            this.txtNitCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNitCliente.Location = new System.Drawing.Point(69, 63);
+            this.txtNitCliente.Name = "txtNitCliente";
+            this.txtNitCliente.Size = new System.Drawing.Size(117, 29);
+            this.txtNitCliente.TabIndex = 7;
             // 
             // label4
             // 
@@ -474,24 +474,25 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "NOMBRE:";
             // 
-            // textBox2
+            // txtNombreCliente
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(319, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 29);
-            this.textBox2.TabIndex = 9;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.Location = new System.Drawing.Point(319, 63);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(117, 29);
+            this.txtNombreCliente.TabIndex = 9;
             // 
-            // checkBox1
+            // checkBoxCF
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(487, 58);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 24);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "CF";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxCF.AutoSize = true;
+            this.checkBoxCF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCF.Location = new System.Drawing.Point(482, 62);
+            this.checkBoxCF.Name = "checkBoxCF";
+            this.checkBoxCF.Size = new System.Drawing.Size(51, 24);
+            this.checkBoxCF.TabIndex = 11;
+            this.checkBoxCF.Text = "CF";
+            this.checkBoxCF.UseVisualStyleBackColor = true;
+            this.checkBoxCF.CheckedChanged += new System.EventHandler(this.checkBoxCF_CheckedChanged);
             // 
             // label6
             // 
@@ -503,17 +504,17 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "DATOS DE LA TRANSACCION:";
             // 
-            // cbBombas
+            // cbBombasDisponibles
             // 
-            this.cbBombas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBombas.FormattingEnabled = true;
-            this.cbBombas.Items.AddRange(new object[] {
+            this.cbBombasDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBombasDisponibles.FormattingEnabled = true;
+            this.cbBombasDisponibles.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.cbBombas.Location = new System.Drawing.Point(89, 158);
-            this.cbBombas.Name = "cbBombas";
-            this.cbBombas.Size = new System.Drawing.Size(97, 32);
-            this.cbBombas.TabIndex = 13;
+            this.cbBombasDisponibles.Location = new System.Drawing.Point(89, 158);
+            this.cbBombasDisponibles.Name = "cbBombasDisponibles";
+            this.cbBombasDisponibles.Size = new System.Drawing.Size(97, 32);
+            this.cbBombasDisponibles.TabIndex = 13;
             // 
             // label7
             // 
@@ -545,21 +546,27 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Q:";
             // 
-            // textBox5
+            // txtCantidadEfectivoPorCobrar
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(222, 216);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(117, 29);
-            this.textBox5.TabIndex = 19;
+            this.txtCantidadEfectivoPorCobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadEfectivoPorCobrar.Location = new System.Drawing.Point(222, 216);
+            this.txtCantidadEfectivoPorCobrar.Name = "txtCantidadEfectivoPorCobrar";
+            this.txtCantidadEfectivoPorCobrar.Size = new System.Drawing.Size(117, 29);
+            this.txtCantidadEfectivoPorCobrar.TabIndex = 19;
+            this.txtCantidadEfectivoPorCobrar.TextChanged += new System.EventHandler(this.txtCantidadEfectivoPorCobrar_TextChanged);
+            this.txtCantidadEfectivoPorCobrar.Enter += new System.EventHandler(this.txtCantidadEfectivoPorCobrar_Enter);
+            this.txtCantidadEfectivoPorCobrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadEfectivoPorCobrar_KeyPress);
             // 
-            // textBox3
+            // txtCantidadLitrosGasolina
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(60, 216);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(117, 29);
-            this.textBox3.TabIndex = 20;
+            this.txtCantidadLitrosGasolina.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadLitrosGasolina.Location = new System.Drawing.Point(60, 216);
+            this.txtCantidadLitrosGasolina.Name = "txtCantidadLitrosGasolina";
+            this.txtCantidadLitrosGasolina.Size = new System.Drawing.Size(117, 29);
+            this.txtCantidadLitrosGasolina.TabIndex = 20;
+            this.txtCantidadLitrosGasolina.TextChanged += new System.EventHandler(this.txtCantidadLitrosGasolina_TextChanged);
+            this.txtCantidadLitrosGasolina.Enter += new System.EventHandler(this.txtCantidadLitrosGasolina_Enter);
+            this.txtCantidadLitrosGasolina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadLitrosGasolina_KeyPress);
             // 
             // label10
             // 
@@ -571,35 +578,37 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "TIPO ABAST.";
             // 
-            // comboBox1
+            // cbTipoAbstecimiento
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTipoAbstecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoAbstecimiento.FormattingEnabled = true;
+            this.cbTipoAbstecimiento.Items.AddRange(new object[] {
             "TANQUE LLENO",
             "PREPAGO"});
-            this.comboBox1.Location = new System.Drawing.Point(319, 158);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 32);
-            this.comboBox1.TabIndex = 21;
+            this.cbTipoAbstecimiento.Location = new System.Drawing.Point(319, 158);
+            this.cbTipoAbstecimiento.Name = "cbTipoAbstecimiento";
+            this.cbTipoAbstecimiento.Size = new System.Drawing.Size(226, 32);
+            this.cbTipoAbstecimiento.TabIndex = 21;
             // 
-            // button1
+            // btnSolicitarDespacho
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(370, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 30);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "SOLICITAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSolicitarDespacho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitarDespacho.Location = new System.Drawing.Point(370, 216);
+            this.btnSolicitarDespacho.Name = "btnSolicitarDespacho";
+            this.btnSolicitarDespacho.Size = new System.Drawing.Size(175, 30);
+            this.btnSolicitarDespacho.TabIndex = 23;
+            this.btnSolicitarDespacho.Text = "SOLICITAR";
+            this.btnSolicitarDespacho.UseVisualStyleBackColor = true;
+            this.btnSolicitarDespacho.Click += new System.EventHandler(this.btnSolicitarDespacho_Click);
             // 
-            // textBox4
+            // txtPrecioGasolinaDeHoy
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(64, 319);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(117, 29);
-            this.textBox4.TabIndex = 25;
+            this.txtPrecioGasolinaDeHoy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioGasolinaDeHoy.Location = new System.Drawing.Point(64, 319);
+            this.txtPrecioGasolinaDeHoy.Name = "txtPrecioGasolinaDeHoy";
+            this.txtPrecioGasolinaDeHoy.Size = new System.Drawing.Size(117, 29);
+            this.txtPrecioGasolinaDeHoy.TabIndex = 25;
+            this.txtPrecioGasolinaDeHoy.Text = "8.64";
             // 
             // label11
             // 
@@ -659,21 +668,21 @@
             this.panel1.Size = new System.Drawing.Size(2, 320);
             this.panel1.TabIndex = 9;
             // 
-            // listBox1
+            // listaDespachosBomba1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(7, 247);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(282, 108);
-            this.listBox1.TabIndex = 10;
+            this.listaDespachosBomba1.FormattingEnabled = true;
+            this.listaDespachosBomba1.Location = new System.Drawing.Point(7, 247);
+            this.listaDespachosBomba1.Name = "listaDespachosBomba1";
+            this.listaDespachosBomba1.Size = new System.Drawing.Size(282, 108);
+            this.listaDespachosBomba1.TabIndex = 10;
             // 
-            // listBox2
+            // listaDespachosBomba2
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(303, 247);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(282, 108);
-            this.listBox2.TabIndex = 11;
+            this.listaDespachosBomba2.FormattingEnabled = true;
+            this.listaDespachosBomba2.Location = new System.Drawing.Point(303, 247);
+            this.listaDespachosBomba2.Name = "listaDespachosBomba2";
+            this.listaDespachosBomba2.Size = new System.Drawing.Size(282, 108);
+            this.listaDespachosBomba2.TabIndex = 11;
             // 
             // label15
             // 
@@ -693,31 +702,31 @@
             this.label16.TabIndex = 13;
             this.label16.Text = "DESPACHOS SOLICITADOS";
             // 
-            // button6
+            // btnIniciarDespachoBomba1
             // 
-            this.button6.Location = new System.Drawing.Point(7, 146);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(132, 23);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "INICIAR";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnIniciarDespachoBomba1.Location = new System.Drawing.Point(7, 146);
+            this.btnIniciarDespachoBomba1.Name = "btnIniciarDespachoBomba1";
+            this.btnIniciarDespachoBomba1.Size = new System.Drawing.Size(132, 23);
+            this.btnIniciarDespachoBomba1.TabIndex = 14;
+            this.btnIniciarDespachoBomba1.Text = "INICIAR";
+            this.btnIniciarDespachoBomba1.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnDetenerDespachoBomba1
             // 
-            this.button7.Location = new System.Drawing.Point(145, 146);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 23);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "DETENER";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnDetenerDespachoBomba1.Location = new System.Drawing.Point(145, 146);
+            this.btnDetenerDespachoBomba1.Name = "btnDetenerDespachoBomba1";
+            this.btnDetenerDespachoBomba1.Size = new System.Drawing.Size(141, 23);
+            this.btnDetenerDespachoBomba1.TabIndex = 15;
+            this.btnDetenerDespachoBomba1.Text = "DETENER";
+            this.btnDetenerDespachoBomba1.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtProgresoLitrosBomba1
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(52, 94);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(89, 29);
-            this.textBox6.TabIndex = 22;
+            this.txtProgresoLitrosBomba1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProgresoLitrosBomba1.Location = new System.Drawing.Point(52, 94);
+            this.txtProgresoLitrosBomba1.Name = "txtProgresoLitrosBomba1";
+            this.txtProgresoLitrosBomba1.Size = new System.Drawing.Size(89, 29);
+            this.txtProgresoLitrosBomba1.TabIndex = 22;
             // 
             // label17
             // 
@@ -729,13 +738,13 @@
             this.label17.TabIndex = 21;
             this.label17.Text = "LT:";
             // 
-            // textBox7
+            // txtProgresoMontoBomba1
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(181, 94);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(89, 29);
-            this.textBox7.TabIndex = 24;
+            this.txtProgresoMontoBomba1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProgresoMontoBomba1.Location = new System.Drawing.Point(181, 94);
+            this.txtProgresoMontoBomba1.Name = "txtProgresoMontoBomba1";
+            this.txtProgresoMontoBomba1.Size = new System.Drawing.Size(89, 29);
+            this.txtProgresoMontoBomba1.TabIndex = 24;
             // 
             // label18
             // 
@@ -747,22 +756,22 @@
             this.label18.TabIndex = 23;
             this.label18.Text = "Q.";
             // 
-            // button8
+            // btnRealizarCobroBomba1
             // 
-            this.button8.Location = new System.Drawing.Point(7, 185);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(279, 23);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "COBRO";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnRealizarCobroBomba1.Location = new System.Drawing.Point(7, 185);
+            this.btnRealizarCobroBomba1.Name = "btnRealizarCobroBomba1";
+            this.btnRealizarCobroBomba1.Size = new System.Drawing.Size(279, 23);
+            this.btnRealizarCobroBomba1.TabIndex = 25;
+            this.btnRealizarCobroBomba1.Text = "COBRO";
+            this.btnRealizarCobroBomba1.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txtIdDespachoBomba1
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(145, 49);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(141, 29);
-            this.textBox8.TabIndex = 27;
+            this.txtIdDespachoBomba1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdDespachoBomba1.Location = new System.Drawing.Point(145, 49);
+            this.txtIdDespachoBomba1.Name = "txtIdDespachoBomba1";
+            this.txtIdDespachoBomba1.Size = new System.Drawing.Size(141, 29);
+            this.txtIdDespachoBomba1.TabIndex = 27;
             // 
             // label19
             // 
@@ -774,13 +783,13 @@
             this.label19.TabIndex = 26;
             this.label19.Text = "ID DESPACHO";
             // 
-            // textBox9
+            // txtIdDespachoBomba2
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(436, 46);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(141, 29);
-            this.textBox9.TabIndex = 37;
+            this.txtIdDespachoBomba2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdDespachoBomba2.Location = new System.Drawing.Point(436, 46);
+            this.txtIdDespachoBomba2.Name = "txtIdDespachoBomba2";
+            this.txtIdDespachoBomba2.Size = new System.Drawing.Size(141, 29);
+            this.txtIdDespachoBomba2.TabIndex = 37;
             // 
             // label20
             // 
@@ -792,22 +801,22 @@
             this.label20.TabIndex = 36;
             this.label20.Text = "ID DESPACHO";
             // 
-            // button9
+            // btnRealizarCobroBomba2
             // 
-            this.button9.Location = new System.Drawing.Point(305, 185);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(279, 23);
-            this.button9.TabIndex = 35;
-            this.button9.Text = "COBRO";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnRealizarCobroBomba2.Location = new System.Drawing.Point(305, 185);
+            this.btnRealizarCobroBomba2.Name = "btnRealizarCobroBomba2";
+            this.btnRealizarCobroBomba2.Size = new System.Drawing.Size(279, 23);
+            this.btnRealizarCobroBomba2.TabIndex = 35;
+            this.btnRealizarCobroBomba2.Text = "COBRO";
+            this.btnRealizarCobroBomba2.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // txtProgresoMontoBomba2
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(479, 94);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(89, 29);
-            this.textBox10.TabIndex = 34;
+            this.txtProgresoMontoBomba2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProgresoMontoBomba2.Location = new System.Drawing.Point(479, 94);
+            this.txtProgresoMontoBomba2.Name = "txtProgresoMontoBomba2";
+            this.txtProgresoMontoBomba2.Size = new System.Drawing.Size(89, 29);
+            this.txtProgresoMontoBomba2.TabIndex = 34;
             // 
             // label21
             // 
@@ -819,13 +828,13 @@
             this.label21.TabIndex = 33;
             this.label21.Text = "Q.";
             // 
-            // textBox11
+            // txtProgresoLitrosBomba2
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(340, 94);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(89, 29);
-            this.textBox11.TabIndex = 32;
+            this.txtProgresoLitrosBomba2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProgresoLitrosBomba2.Location = new System.Drawing.Point(340, 94);
+            this.txtProgresoLitrosBomba2.Name = "txtProgresoLitrosBomba2";
+            this.txtProgresoLitrosBomba2.Size = new System.Drawing.Size(89, 29);
+            this.txtProgresoLitrosBomba2.TabIndex = 32;
             // 
             // label22
             // 
@@ -837,23 +846,23 @@
             this.label22.TabIndex = 31;
             this.label22.Text = "LT:";
             // 
-            // button10
+            // btnDetenerDespachoBomba2
             // 
-            this.button10.Location = new System.Drawing.Point(443, 146);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(141, 23);
-            this.button10.TabIndex = 30;
-            this.button10.Text = "DETENER";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnDetenerDespachoBomba2.Location = new System.Drawing.Point(443, 146);
+            this.btnDetenerDespachoBomba2.Name = "btnDetenerDespachoBomba2";
+            this.btnDetenerDespachoBomba2.Size = new System.Drawing.Size(141, 23);
+            this.btnDetenerDespachoBomba2.TabIndex = 30;
+            this.btnDetenerDespachoBomba2.Text = "DETENER";
+            this.btnDetenerDespachoBomba2.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnIniciarDespachoBomba2
             // 
-            this.button11.Location = new System.Drawing.Point(305, 146);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(132, 23);
-            this.button11.TabIndex = 29;
-            this.button11.Text = "INICIAR";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnIniciarDespachoBomba2.Location = new System.Drawing.Point(305, 146);
+            this.btnIniciarDespachoBomba2.Name = "btnIniciarDespachoBomba2";
+            this.btnIniciarDespachoBomba2.Size = new System.Drawing.Size(132, 23);
+            this.btnIniciarDespachoBomba2.TabIndex = 29;
+            this.btnIniciarDespachoBomba2.Text = "INICIAR";
+            this.btnIniciarDespachoBomba2.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -864,13 +873,13 @@
             this.label23.TabIndex = 10;
             this.label23.Text = "CIERRES";
             // 
-            // dataGridView2
+            // tablaCierresPasados
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 26);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(156, 317);
-            this.dataGridView2.TabIndex = 9;
+            this.tablaCierresPasados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaCierresPasados.Location = new System.Drawing.Point(16, 26);
+            this.tablaCierresPasados.Name = "tablaCierresPasados";
+            this.tablaCierresPasados.Size = new System.Drawing.Size(156, 317);
+            this.tablaCierresPasados.TabIndex = 9;
             // 
             // label24
             // 
@@ -881,13 +890,13 @@
             this.label24.TabIndex = 12;
             this.label24.Text = "DESPACHOS";
             // 
-            // dataGridView3
+            // tablaAbastecimientosPasados
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(181, 26);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(156, 317);
-            this.dataGridView3.TabIndex = 11;
+            this.tablaAbastecimientosPasados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaAbastecimientosPasados.Location = new System.Drawing.Point(181, 26);
+            this.tablaAbastecimientosPasados.Name = "tablaAbastecimientosPasados";
+            this.tablaAbastecimientosPasados.Size = new System.Drawing.Size(156, 317);
+            this.tablaAbastecimientosPasados.TabIndex = 11;
             // 
             // label25
             // 
@@ -898,29 +907,29 @@
             this.label25.TabIndex = 13;
             this.label25.Text = "FILTRO:";
             // 
-            // comboBox2
+            // cbSeleccionDeFiltro
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(411, 23);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(163, 21);
-            this.comboBox2.TabIndex = 14;
+            this.cbSeleccionDeFiltro.FormattingEnabled = true;
+            this.cbSeleccionDeFiltro.Location = new System.Drawing.Point(411, 23);
+            this.cbSeleccionDeFiltro.Name = "cbSeleccionDeFiltro";
+            this.cbSeleccionDeFiltro.Size = new System.Drawing.Size(163, 21);
+            this.cbSeleccionDeFiltro.TabIndex = 14;
             // 
-            // chart1
+            // graficaDeUsoDeBombas
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(360, 56);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(214, 133);
-            this.chart1.TabIndex = 15;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.graficaDeUsoDeBombas.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.graficaDeUsoDeBombas.Legends.Add(legend2);
+            this.graficaDeUsoDeBombas.Location = new System.Drawing.Point(360, 56);
+            this.graficaDeUsoDeBombas.Name = "graficaDeUsoDeBombas";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.graficaDeUsoDeBombas.Series.Add(series2);
+            this.graficaDeUsoDeBombas.Size = new System.Drawing.Size(214, 133);
+            this.graficaDeUsoDeBombas.TabIndex = 15;
+            this.graficaDeUsoDeBombas.Text = "chart1";
             // 
             // label26
             // 
@@ -931,19 +940,19 @@
             this.label26.TabIndex = 16;
             this.label26.Text = "MAS USADA";
             // 
-            // textBox12
+            // txtBombaMásUsada
             // 
-            this.textBox12.Location = new System.Drawing.Point(430, 205);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(144, 20);
-            this.textBox12.TabIndex = 17;
+            this.txtBombaMásUsada.Location = new System.Drawing.Point(430, 205);
+            this.txtBombaMásUsada.Name = "txtBombaMásUsada";
+            this.txtBombaMásUsada.Size = new System.Drawing.Size(144, 20);
+            this.txtBombaMásUsada.TabIndex = 17;
             // 
-            // textBox13
+            // txtBombaMenosUsada
             // 
-            this.textBox13.Location = new System.Drawing.Point(430, 245);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(144, 20);
-            this.textBox13.TabIndex = 19;
+            this.txtBombaMenosUsada.Location = new System.Drawing.Point(430, 245);
+            this.txtBombaMenosUsada.Name = "txtBombaMenosUsada";
+            this.txtBombaMenosUsada.Size = new System.Drawing.Size(144, 20);
+            this.txtBombaMenosUsada.TabIndex = 19;
             // 
             // label27
             // 
@@ -954,14 +963,14 @@
             this.label27.TabIndex = 18;
             this.label27.Text = "MENOR";
             // 
-            // button12
+            // btnCargarDatosDeFiltro
             // 
-            this.button12.Location = new System.Drawing.Point(342, 296);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(246, 27);
-            this.button12.TabIndex = 20;
-            this.button12.Text = "CARGAR DATOS";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnCargarDatosDeFiltro.Location = new System.Drawing.Point(342, 296);
+            this.btnCargarDatosDeFiltro.Name = "btnCargarDatosDeFiltro";
+            this.btnCargarDatosDeFiltro.Size = new System.Drawing.Size(246, 27);
+            this.btnCargarDatosDeFiltro.TabIndex = 20;
+            this.btnCargarDatosDeFiltro.Text = "CARGAR DATOS";
+            this.btnCargarDatosDeFiltro.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -985,10 +994,10 @@
             this.tabSeleccionReportesYCierres.PerformLayout();
             this.tabReportes.ResumeLayout(false);
             this.tabReportes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaAbastecimientosActuales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaCierresPasados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaAbastecimientosPasados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficaDeUsoDeBombas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1020,25 +1029,25 @@
         private System.Windows.Forms.Button btnVerReportesYCierres;
         private System.Windows.Forms.Button btnCerrarCaja;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tablaAbastecimientosActuales;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNitCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxCF;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbBombas;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox cbBombasDisponibles;
+        private System.Windows.Forms.TextBox txtCantidadEfectivoPorCobrar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCantidadLitrosGasolina;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbTipoAbstecimiento;
+        private System.Windows.Forms.Button btnSolicitarDespacho;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrecioGasolinaDeHoy;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
@@ -1046,38 +1055,38 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ListBox listaDespachosBomba2;
+        private System.Windows.Forms.ListBox listaDespachosBomba1;
+        private System.Windows.Forms.Button btnDetenerDespachoBomba1;
+        private System.Windows.Forms.Button btnIniciarDespachoBomba1;
+        private System.Windows.Forms.TextBox txtIdDespachoBomba1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btnRealizarCobroBomba1;
+        private System.Windows.Forms.TextBox txtProgresoMontoBomba1;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtProgresoLitrosBomba1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtIdDespachoBomba2;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Button btnRealizarCobroBomba2;
+        private System.Windows.Forms.TextBox txtProgresoMontoBomba2;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtProgresoLitrosBomba2;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnDetenerDespachoBomba2;
+        private System.Windows.Forms.Button btnIniciarDespachoBomba2;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.DataGridView tablaCierresPasados;
+        private System.Windows.Forms.Button btnCargarDatosDeFiltro;
+        private System.Windows.Forms.TextBox txtBombaMenosUsada;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtBombaMásUsada;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graficaDeUsoDeBombas;
+        private System.Windows.Forms.ComboBox cbSeleccionDeFiltro;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView tablaAbastecimientosPasados;
     }
 }
 
