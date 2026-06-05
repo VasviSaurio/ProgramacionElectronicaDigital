@@ -111,6 +111,41 @@ namespace ProyectoGasolinera
         {
             tabControl2.SelectedTab = tabBienvenida;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectedTab = tabBienvenida;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectedTab = tabBienvenida;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectedTab = tabBienvenida;
+        }
+
+        private void btnRealizarPedidoGasolina_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectedTab = tabVentaGasolina;
+        }
+
+        private void btnAbastecimientoBombas_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectedTab = tabAbastecimientos;
+        }
+
+        private void btnReportesYCierres_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectedTab = tabSeleccionReportesYCierres;
+        }
+
+        private void btnVerReportesYCierres_Click(object sender, EventArgs e)
+        {
+            tabControl2.SelectedTab = tabReportes;
+        }
     }
 }
     

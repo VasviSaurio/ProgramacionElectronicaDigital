@@ -48,6 +48,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCerrarCaja = new System.Windows.Forms.Button();
+            this.btnVerReportesYCierres = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabBienvenida.SuspendLayout();
             this.tabVentaGasolina.SuspendLayout();
@@ -55,6 +59,7 @@
             this.tabAbastecimientos.SuspendLayout();
             this.tabSeleccionReportesYCierres.SuspendLayout();
             this.tabReportes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl2
@@ -147,6 +152,7 @@
             this.btnRealizarPedidoGasolina.TabIndex = 4;
             this.btnRealizarPedidoGasolina.Text = "VENTA";
             this.btnRealizarPedidoGasolina.UseVisualStyleBackColor = true;
+            this.btnRealizarPedidoGasolina.Click += new System.EventHandler(this.btnRealizarPedidoGasolina_Click);
             // 
             // btnObtenerPuertosDisponibles
             // 
@@ -177,6 +183,7 @@
             this.btnAbastecimientoBombas.TabIndex = 7;
             this.btnAbastecimientoBombas.Text = "ABASTECIMIENTO";
             this.btnAbastecimientoBombas.UseVisualStyleBackColor = true;
+            this.btnAbastecimientoBombas.Click += new System.EventHandler(this.btnAbastecimientoBombas_Click);
             // 
             // btnReportesYCierres
             // 
@@ -186,6 +193,7 @@
             this.btnReportesYCierres.TabIndex = 8;
             this.btnReportesYCierres.Text = "REPORTES Y CIERRES";
             this.btnReportesYCierres.UseVisualStyleBackColor = true;
+            this.btnReportesYCierres.Click += new System.EventHandler(this.btnReportesYCierres_Click);
             // 
             // tabAbastecimientos
             // 
@@ -199,6 +207,10 @@
             // 
             // tabSeleccionReportesYCierres
             // 
+            this.tabSeleccionReportesYCierres.Controls.Add(this.btnVerReportesYCierres);
+            this.tabSeleccionReportesYCierres.Controls.Add(this.btnCerrarCaja);
+            this.tabSeleccionReportesYCierres.Controls.Add(this.label2);
+            this.tabSeleccionReportesYCierres.Controls.Add(this.dataGridView1);
             this.tabSeleccionReportesYCierres.Controls.Add(this.button3);
             this.tabSeleccionReportesYCierres.Location = new System.Drawing.Point(4, 22);
             this.tabSeleccionReportesYCierres.Name = "tabSeleccionReportesYCierres";
@@ -235,15 +247,17 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Regresar al inicio";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(429, 329);
+            this.button3.Location = new System.Drawing.Point(418, 320);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 27);
             this.button3.TabIndex = 6;
             this.button3.Text = "Regresar al inicio";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -253,6 +267,43 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Regresar al inicio";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(560, 277);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "ABASTECIMIENTOS DEL DÍA";
+            // 
+            // btnCerrarCaja
+            // 
+            this.btnCerrarCaja.Location = new System.Drawing.Point(17, 320);
+            this.btnCerrarCaja.Name = "btnCerrarCaja";
+            this.btnCerrarCaja.Size = new System.Drawing.Size(159, 27);
+            this.btnCerrarCaja.TabIndex = 9;
+            this.btnCerrarCaja.Text = "Cerrar caja";
+            this.btnCerrarCaja.UseVisualStyleBackColor = true;
+            // 
+            // btnVerReportesYCierres
+            // 
+            this.btnVerReportesYCierres.Location = new System.Drawing.Point(212, 320);
+            this.btnVerReportesYCierres.Name = "btnVerReportesYCierres";
+            this.btnVerReportesYCierres.Size = new System.Drawing.Size(159, 27);
+            this.btnVerReportesYCierres.TabIndex = 10;
+            this.btnVerReportesYCierres.Text = "Reportes y cierres";
+            this.btnVerReportesYCierres.UseVisualStyleBackColor = true;
+            this.btnVerReportesYCierres.Click += new System.EventHandler(this.btnVerReportesYCierres_Click);
             // 
             // Form1
             // 
@@ -271,7 +322,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabAbastecimientos.ResumeLayout(false);
             this.tabSeleccionReportesYCierres.ResumeLayout(false);
+            this.tabSeleccionReportesYCierres.PerformLayout();
             this.tabReportes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -300,6 +353,10 @@
         private System.Windows.Forms.TabPage tabReportes;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnVerReportesYCierres;
+        private System.Windows.Forms.Button btnCerrarCaja;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
