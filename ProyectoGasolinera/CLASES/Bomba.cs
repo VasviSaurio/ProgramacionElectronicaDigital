@@ -13,7 +13,6 @@ namespace ProyectoGasolinera.CLASES
         private int idBomba;
         private double litrosSolicitados;
         private double litrosDespachados;
-        private double precioGasolina;
 
         public Bomba(int idBomba, double litrosSolicitados)
         {

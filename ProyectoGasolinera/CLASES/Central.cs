@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoGasolinera.CLASES
 {
-    internal class Central
+    public class Central
     {
         
     }
