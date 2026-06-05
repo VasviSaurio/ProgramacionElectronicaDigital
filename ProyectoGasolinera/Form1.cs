@@ -71,46 +71,50 @@ namespace ProyectoGasolinera
         }
         private void ProcesarAbastecimiento(int indiceBomba, string nombreBomba)
         {
-            string cliente = txtNombreCliente.Text;
-            string nit = txtNIT.Text;
-            double monto = double.Parse(txtMonto.Text);
+            // Validaciones de entrada
+            if (string.IsNullOrWhiteSpace(txtNombreCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar el nombre del cliente.");
+                return;
+            }
 
+            if (string.IsNullOrWhiteSpace(txtNIT.Text))
+            {
+                MessageBox.Show("Debe ingresar el NIT.");
+                return;
+            }
+
+            if (!double.TryParse(txtMonto.Text, out double monto))
+            {
+                MessageBox.Show("El monto debe ser un número válido.");
+                return;
+            }
+
+            // --- Lógica normal después de validar ---
             Bomba bombaSeleccionada = bombas[indiceBomba];
             bombaSeleccionada.IniciarAbastecimiento();
 
             double litros = monto / central.PrecioSuper;
 
-            central.Facturar(cliente, monto);
+            central.Facturar(txtNombreCliente.Text, monto);
 
-          
             var registro = new RegistroAbastecimiento
             {
                 Fecha = DateTime.Now,
-                Cliente = cliente,
-                NIT = nit,
+                Cliente = txtNombreCliente.Text,
+                NIT = txtNIT.Text,
                 Monto = monto,
                 Litros = litros,
                 Bomba = nombreBomba,
                 TipoServicio = "Prepago"
             };
 
-          
             GestorArchivos.GuardarRegistro(registro);
-
-           
             dgvHistorial.Rows.Add(registro.Fecha, registro.Cliente, registro.NIT, registro.Monto, registro.Litros, registro.Bomba);
-
-           
-            string mensaje = System.Text.Json.JsonSerializer.Serialize(new
-            {
-                accion = "iniciar",
-                bomba = indiceBomba + 1,
-                litros = litros
-            });
-            comunicacion.EnviarMensajeJSON(mensaje);
         }
 
-       
+
+
         private void btnCierreCaja_Click(object sender, EventArgs e)
         {
             central.GenerarCierreCaja();
