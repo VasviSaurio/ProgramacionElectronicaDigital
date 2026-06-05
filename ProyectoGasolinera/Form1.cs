@@ -1,5 +1,4 @@
-﻿using ProyectoGasolinera.CLASES;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using ProyectoGasolinera.CLASES;
 using static ProyectoGasolinera.CLASES.GestorArchivos;
 
 namespace ProyectoGasolinera
@@ -19,11 +20,10 @@ namespace ProyectoGasolinera
         private List<Bomba> bombas;
         private Comunicacion comunicacion;
         private string tipoServicioSeleccionado = "Prepago"; 
+   
+
         public Form1()
         {
-            InitializeComponent();
-
-
             InitializeComponent();
 
             central = new Central();
@@ -38,7 +38,21 @@ namespace ProyectoGasolinera
 
             central.PrecioSuper = 10.0;
             central.PrecioDiesel = 8.5;
+            //comunicacionSerial = new ComunicacionSerial("COM3", 9600);
+            //comunicacionSerial.MensajeRecibido += ProcesarRespuestaArduino;
+            //comunicacionSerial.Abrir();
 
+        }
+        private void ProcesarRespuestaArduino(string mensaje)
+        {
+            
+            MessageBox.Show("Respuesta Arduino: " + mensaje);
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            string mensaje = "{ \"accion\": \"iniciar\", \"bomba\": 1, \"litros\": 2.5 }";
+            //comunicacionSerial.Enviar(mensaje);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -214,5 +228,62 @@ namespace ProyectoGasolinera
                 Console.WriteLine($"Fecha: {cierre.Fecha} | Abastecimientos: {cierre.Abastecimientos} | Total: Q{cierre.TotalDia}");
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            List<RegistroAbastecimiento> registros = GestorArchivos.LeerRegistros();
+
+            if (registros.Count == 0)
+            {
+                MessageBox.Show("No hay registros para estadísticas.");
+                return;
+            }
+
+            // Filtrar por día actual
+            var hoy = DateTime.Now.Date;
+            var abastecimientosHoy = registros.Where(r => r.Fecha.Date == hoy).ToList();
+
+            dgvAbastecimientosHoy.Rows.Clear();
+            foreach (var r in abastecimientosHoy)
+            {
+                dgvAbastecimientosHoy.Rows.Add(r.Fecha, r.Cliente, r.NIT, r.Monto, r.Litros, r.Bomba, r.TipoServicio);
+            }
+
+            // Estadísticas de Prepago y Tanque lleno
+            int totalPrepago = registros.Count(r => r.TipoServicio == "Prepago");
+            int totalTanqueLleno = registros.Count(r => r.TipoServicio == "Tanque lleno");
+
+            lblPrepago.Text = $"Total Prepago: {totalPrepago}";
+            lblTanqueLleno.Text = $"Total Tanque lleno: {totalTanqueLleno}";
+
+            // Uso de bombas
+            var usoBombas = registros.GroupBy(r => r.Bomba)
+                                     .Select(g => new { Bomba = g.Key, Usos = g.Count() })
+                                     .ToList();
+
+            chartUsoBombas.Series.Clear();
+            var serie = new Series("Series1");
+            serie.ChartType = SeriesChartType.Column;
+
+            foreach (var b in usoBombas)
+            {
+                serie.Points.AddXY(b.Bomba, b.Usos);
+            }
+
+            chartUsoBombas.Series.Add(serie);
+
+            // Bomba más usada y menos usada
+            var bombaMasUsada = usoBombas.OrderByDescending(b => b.Usos).FirstOrDefault();
+            var bombaMenosUsada = usoBombas.OrderBy(b => b.Usos).FirstOrDefault();
+
+            lblBombaMasUsada.Text = $"Bomba más usada: {bombaMasUsada?.Bomba ?? "N/A"}";
+            lblBombaMenosUsada.Text = $"Bomba menos usada: {bombaMenosUsada?.Bomba ?? "N/A"}";
+        }
     }
     }
+    
