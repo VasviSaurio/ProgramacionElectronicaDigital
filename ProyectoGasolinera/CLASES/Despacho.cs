@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace ProyectoGasolinera.CLASES
 {
-    internal class Despachador
+    internal class Despacho
     {
+        //FORMATO 
+        //{"cmd":"activar","bomba":1,"litros":5,"precio":10}
+        //{"cmd":"activar","bomba":2,"litros":3,"precio":12}
+        //{"cmd":"activar","bomba":1,"litros":-1,"precio":10}
+        //{"cmd":"detener","bomba":1}
+        //{"tipo":"estado","b1":1.25,"b2":0.73}
         public string NombreDespachador { get; set; }
         public List<Bomba> Bombas { get; set; }
 
-        public Despachador(string nombre)
+        public Despacho(string nombre)
         {
             NombreDespachador = nombre;
             Bombas = new List<Bomba>();

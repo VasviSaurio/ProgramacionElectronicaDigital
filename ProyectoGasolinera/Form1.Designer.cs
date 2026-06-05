@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabBienvenida = new System.Windows.Forms.TabPage();
             this.tabVentaGasolina = new System.Windows.Forms.TabPage();
@@ -112,6 +112,8 @@
             this.txtBombaMenosUsada = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.btnCargarDatosDeFiltro = new System.Windows.Forms.Button();
+            this.btnSiguienteAbastecimientoBomba1 = new System.Windows.Forms.Button();
+            this.btnSiguienteAbastecimientoBomba2 = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabBienvenida.SuspendLayout();
             this.tabVentaGasolina.SuspendLayout();
@@ -290,6 +292,8 @@
             // 
             // tabAbastecimientos
             // 
+            this.tabAbastecimientos.Controls.Add(this.btnSiguienteAbastecimientoBomba2);
+            this.tabAbastecimientos.Controls.Add(this.btnSiguienteAbastecimientoBomba1);
             this.tabAbastecimientos.Controls.Add(this.txtIdDespachoBomba2);
             this.tabAbastecimientos.Controls.Add(this.label20);
             this.tabAbastecimientos.Controls.Add(this.btnRealizarCobroBomba2);
@@ -673,7 +677,7 @@
             this.listaDespachosBomba1.FormattingEnabled = true;
             this.listaDespachosBomba1.Location = new System.Drawing.Point(7, 247);
             this.listaDespachosBomba1.Name = "listaDespachosBomba1";
-            this.listaDespachosBomba1.Size = new System.Drawing.Size(282, 108);
+            this.listaDespachosBomba1.Size = new System.Drawing.Size(282, 82);
             this.listaDespachosBomba1.TabIndex = 10;
             // 
             // listaDespachosBomba2
@@ -681,7 +685,7 @@
             this.listaDespachosBomba2.FormattingEnabled = true;
             this.listaDespachosBomba2.Location = new System.Drawing.Point(303, 247);
             this.listaDespachosBomba2.Name = "listaDespachosBomba2";
-            this.listaDespachosBomba2.Size = new System.Drawing.Size(282, 108);
+            this.listaDespachosBomba2.Size = new System.Drawing.Size(282, 82);
             this.listaDespachosBomba2.TabIndex = 11;
             // 
             // label15
@@ -704,6 +708,7 @@
             // 
             // btnIniciarDespachoBomba1
             // 
+            this.btnIniciarDespachoBomba1.Enabled = false;
             this.btnIniciarDespachoBomba1.Location = new System.Drawing.Point(7, 146);
             this.btnIniciarDespachoBomba1.Name = "btnIniciarDespachoBomba1";
             this.btnIniciarDespachoBomba1.Size = new System.Drawing.Size(132, 23);
@@ -713,6 +718,7 @@
             // 
             // btnDetenerDespachoBomba1
             // 
+            this.btnDetenerDespachoBomba1.Enabled = false;
             this.btnDetenerDespachoBomba1.Location = new System.Drawing.Point(145, 146);
             this.btnDetenerDespachoBomba1.Name = "btnDetenerDespachoBomba1";
             this.btnDetenerDespachoBomba1.Size = new System.Drawing.Size(141, 23);
@@ -758,6 +764,7 @@
             // 
             // btnRealizarCobroBomba1
             // 
+            this.btnRealizarCobroBomba1.Enabled = false;
             this.btnRealizarCobroBomba1.Location = new System.Drawing.Point(7, 185);
             this.btnRealizarCobroBomba1.Name = "btnRealizarCobroBomba1";
             this.btnRealizarCobroBomba1.Size = new System.Drawing.Size(279, 23);
@@ -803,6 +810,7 @@
             // 
             // btnRealizarCobroBomba2
             // 
+            this.btnRealizarCobroBomba2.Enabled = false;
             this.btnRealizarCobroBomba2.Location = new System.Drawing.Point(305, 185);
             this.btnRealizarCobroBomba2.Name = "btnRealizarCobroBomba2";
             this.btnRealizarCobroBomba2.Size = new System.Drawing.Size(279, 23);
@@ -848,6 +856,7 @@
             // 
             // btnDetenerDespachoBomba2
             // 
+            this.btnDetenerDespachoBomba2.Enabled = false;
             this.btnDetenerDespachoBomba2.Location = new System.Drawing.Point(443, 146);
             this.btnDetenerDespachoBomba2.Name = "btnDetenerDespachoBomba2";
             this.btnDetenerDespachoBomba2.Size = new System.Drawing.Size(141, 23);
@@ -857,6 +866,7 @@
             // 
             // btnIniciarDespachoBomba2
             // 
+            this.btnIniciarDespachoBomba2.Enabled = false;
             this.btnIniciarDespachoBomba2.Location = new System.Drawing.Point(305, 146);
             this.btnIniciarDespachoBomba2.Name = "btnIniciarDespachoBomba2";
             this.btnIniciarDespachoBomba2.Size = new System.Drawing.Size(132, 23);
@@ -917,16 +927,16 @@
             // 
             // graficaDeUsoDeBombas
             // 
-            chartArea2.Name = "ChartArea1";
-            this.graficaDeUsoDeBombas.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.graficaDeUsoDeBombas.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.graficaDeUsoDeBombas.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graficaDeUsoDeBombas.Legends.Add(legend1);
             this.graficaDeUsoDeBombas.Location = new System.Drawing.Point(360, 56);
             this.graficaDeUsoDeBombas.Name = "graficaDeUsoDeBombas";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.graficaDeUsoDeBombas.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.graficaDeUsoDeBombas.Series.Add(series1);
             this.graficaDeUsoDeBombas.Size = new System.Drawing.Size(214, 133);
             this.graficaDeUsoDeBombas.TabIndex = 15;
             this.graficaDeUsoDeBombas.Text = "chart1";
@@ -971,6 +981,26 @@
             this.btnCargarDatosDeFiltro.TabIndex = 20;
             this.btnCargarDatosDeFiltro.Text = "CARGAR DATOS";
             this.btnCargarDatosDeFiltro.UseVisualStyleBackColor = true;
+            // 
+            // btnSiguienteAbastecimientoBomba1
+            // 
+            this.btnSiguienteAbastecimientoBomba1.Enabled = false;
+            this.btnSiguienteAbastecimientoBomba1.Location = new System.Drawing.Point(7, 332);
+            this.btnSiguienteAbastecimientoBomba1.Name = "btnSiguienteAbastecimientoBomba1";
+            this.btnSiguienteAbastecimientoBomba1.Size = new System.Drawing.Size(282, 23);
+            this.btnSiguienteAbastecimientoBomba1.TabIndex = 38;
+            this.btnSiguienteAbastecimientoBomba1.Text = "COBRO";
+            this.btnSiguienteAbastecimientoBomba1.UseVisualStyleBackColor = true;
+            // 
+            // btnSiguienteAbastecimientoBomba2
+            // 
+            this.btnSiguienteAbastecimientoBomba2.Enabled = false;
+            this.btnSiguienteAbastecimientoBomba2.Location = new System.Drawing.Point(303, 332);
+            this.btnSiguienteAbastecimientoBomba2.Name = "btnSiguienteAbastecimientoBomba2";
+            this.btnSiguienteAbastecimientoBomba2.Size = new System.Drawing.Size(282, 23);
+            this.btnSiguienteAbastecimientoBomba2.TabIndex = 39;
+            this.btnSiguienteAbastecimientoBomba2.Text = "COBRO";
+            this.btnSiguienteAbastecimientoBomba2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1087,6 +1117,8 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DataGridView tablaAbastecimientosPasados;
+        private System.Windows.Forms.Button btnSiguienteAbastecimientoBomba2;
+        private System.Windows.Forms.Button btnSiguienteAbastecimientoBomba1;
     }
 }
 

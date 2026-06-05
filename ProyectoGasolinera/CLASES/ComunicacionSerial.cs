@@ -4,6 +4,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectoGasolinera.CLASES
 {
@@ -39,21 +40,18 @@ namespace ProyectoGasolinera.CLASES
             }
         }
 
-        // Enviar mensaje JSON al Arduino
         public void Enviar(string mensaje)
         {
             if (serialPort.IsOpen)
             {
                 serialPort.WriteLine(mensaje);
-                Console.WriteLine($"Enviado: {mensaje}");
             }
             else
             {
-                Console.WriteLine("El puerto no está abierto.");
+                MessageBox.Show("El puerto no está abierto.");
             }
         }
 
-        // Evento: recibir datos del Arduino
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             try

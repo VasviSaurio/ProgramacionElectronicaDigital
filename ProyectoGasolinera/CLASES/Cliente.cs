@@ -11,6 +11,6 @@ namespace ProyectoGasolinera.CLASES
     {
         public string Nombre { get; set; }
         public string NIT { get; set; }
-        //public List<RegistroAbastecimiento> Historial { get; set; } = new List<RegistroAbastecimiento>();
+
     }
 }
