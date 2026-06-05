@@ -12,14 +12,13 @@ namespace ProyectoGasolinera.CLASES
     {
         private int idBomba;
         private double litrosSolicitados;
-        private string tipoAbastecimiento;
         private double litrosDespachados;
+        private double precioGasolina;
 
-        public Bomba(int idBomba, double litrosSolicitados, string tipoAbastecimiento)
+        public Bomba(int idBomba, double litrosSolicitados)
         {
             this.idBomba = idBomba;
             this.litrosSolicitados = litrosSolicitados;
-            this.tipoAbastecimiento = tipoAbastecimiento;
             litrosDespachados = 0;
         }
         public Bomba()
@@ -29,21 +28,36 @@ namespace ProyectoGasolinera.CLASES
             litrosDespachados = 0;
             //TANQUE LLENO
             //PREPAGO
-            tipoAbastecimiento = "TANQUE LLENO";
         }
 
         public int IdBomba { get => idBomba; set => idBomba = value; }
-        public double LitrosSolicitados { get => litrosSolicitados; set => litrosSolicitados = value; }
-        public string TipoAbastecimiento { get => tipoAbastecimiento; set => tipoAbastecimiento = value; }
         public double LitrosDespachados { get => litrosDespachados; set => litrosDespachados = value; }
+        public void setLitrosSolicitados(double lt)
+        {
+            litrosSolicitados = lt;
+        }
 
-        public void iniciarDespacho(SerialPort puerto)
+        public void iniciarDespacho(SerialPort puerto, double precio)
         {
             try
             {
                 if (puerto.IsOpen)
                 {
-                    puerto.WriteLine("MENSAJE");
+                    string mensaje = $"{{\"cmd\":\"activar\",\"bomba\":{idBomba},\"litros\":{litrosSolicitados},\"precio\":{precio}}}";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void detenerDespacho(SerialPort puerto)
+        {
+            try
+            {
+                if (puerto.IsOpen)
+                {
+                    string mensaje = $"{{\"cmd\":\"detener\",\"bomba\":{idBomba}}}";
                 }
             }
             catch (Exception ex)
