@@ -6,84 +6,87 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProyectoGasolinera.CLASES
 {
     public class Bomba
     {
-        private int idBomba;
-        private double litrosSolicitados;
-        private double litrosDespachados;
-        private string configuracionBomba;
-        private TipoDespacho tipo;
+        public int IdBomba { get; set; }
+        public double LitrosSolicitados { get; set; }
+        public double LitrosDespachados { get; set; }
+        public string ConfiguracionBomba { get; set; }
+        public TipoDespacho Tipo { get; set; }
 
-        public TipoDespacho Tipo
-        {
-            get => tipo;
-            set => tipo = value;
-        }
         public enum TipoDespacho
         {
             Prepago,
             TanqueLleno
         }
+
+        public Bomba()
+        {
+            IdBomba = 1;
+            LitrosSolicitados = 0;
+            LitrosDespachados = 0;
+            ConfiguracionBomba = "PREPAGO";
+            Tipo = TipoDespacho.Prepago;
+        }
+
         public Bomba(int idBomba, double litrosSolicitados)
         {
-            this.idBomba = idBomba;
-            this.litrosSolicitados = litrosSolicitados;
-            if (litrosSolicitados != -1)
+            IdBomba = idBomba;
+            LitrosSolicitados = litrosSolicitados;
+            LitrosDespachados = 0;
+
+            // Lógica corregida: -1 es tanque lleno
+            if (litrosSolicitados == -1)
             {
-                configuracionBomba = "TANQUE LLENO";
+                ConfiguracionBomba = "TANQUE LLENO";
+                Tipo = TipoDespacho.TanqueLleno;
             }
             else
             {
-                configuracionBomba = "PREPAGO";
+                ConfiguracionBomba = "PREPAGO";
+                Tipo = TipoDespacho.Prepago;
             }
-            litrosDespachados = 0;
-        }
-        public Bomba()
-        {
-            idBomba = 1;
-            litrosSolicitados = 0;
-            litrosDespachados = 0;
-            //TANQUE LLENO
-            //PREPAGO
         }
 
-        public int IdBomba { get => idBomba; set => idBomba = value; }
-        public double LitrosDespachados { get => litrosDespachados; set => litrosDespachados = value; }
-        public string ConfiguracionBomba { get => configuracionBomba; set => configuracionBomba = value; }
-
-        public void setLitrosSolicitados(double lt)
-        {
-            litrosSolicitados = lt;
-        }
-
-        public void iniciarDespacho(SerialPort puerto, double precio)
+        public void IniciarDespacho(SerialPort puerto, double precio)
         {
             try
             {
-                if (puerto.IsOpen)
+                if (puerto != null && puerto.IsOpen)
                 {
-                    string mensaje = $"{{\"cmd\":\"activar\",\"bomba\":{idBomba},\"litros\":{litrosSolicitados},\"precio\":{precio}}}";
+                    
+                    string mensaje = $"{{\"cmd\":\"activar\",\"bomba\":{IdBomba},\"litros\":{LitrosSolicitados.ToString(System.Globalization.CultureInfo.InvariantCulture)},\"precio\":{precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}}}";
+                    MessageBox.Show(mensaje);
+                    
+                    puerto.WriteLine(mensaje);
+                }
+                else
+                {
+                    MessageBox.Show("El puerto serial no está abierto.", "Error de Comunicación");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error al enviar comando: " + ex.Message);
             }
         }
-        public void detenerDespacho(SerialPort puerto)
+
+        public void DetenerDespacho(SerialPort puerto)
         {
             try
             {
-                if (puerto.IsOpen)
+                if (puerto != null && puerto.IsOpen)
                 {
-                    string mensaje = $"{{\"cmd\":\"detener\",\"bomba\":{idBomba}}}";
+                    string mensaje = $"{{\"cmd\":\"detener\",\"bomba\":{IdBomba}}}";
+                    puerto.WriteLine(mensaje); 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error al detener: " + ex.Message);
             }
         }
     }

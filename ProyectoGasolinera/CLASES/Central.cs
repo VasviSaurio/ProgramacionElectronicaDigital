@@ -78,10 +78,20 @@ namespace ProyectoGasolinera.CLASES
             Despacho.despachosDelDía.Clear();
         }
 
+        private IEnumerable<Despacho> ObtenerTodosLosDespachosHistoricos()
+        {
+            return CierresCaja.SelectMany(c => c.Despachos).Concat(Despacho.despachosDelDía);
+        }
 
         public int ObtenerBombaMasUsada()
         {
-            return 1;
+            var despachos = ObtenerTodosLosDespachosHistoricos();
+            if (!despachos.Any()) return 0; // Si no hay datos
+
+            return despachos
+                .GroupBy(d => d.BombaSolicitada.IdBomba)
+                .OrderByDescending(g => g.Count())
+                .First().Key;
         }
 
         public int ObtenerBombaMenosUsada()
