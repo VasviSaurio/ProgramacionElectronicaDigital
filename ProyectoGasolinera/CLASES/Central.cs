@@ -86,7 +86,7 @@ namespace ProyectoGasolinera.CLASES
         public int ObtenerBombaMasUsada()
         {
             var despachos = ObtenerTodosLosDespachosHistoricos();
-            if (!despachos.Any()) return 0; // Si no hay datos
+            if (!despachos.Any()) return 0; 
 
             return despachos
                 .GroupBy(d => d.BombaSolicitada.IdBomba)
