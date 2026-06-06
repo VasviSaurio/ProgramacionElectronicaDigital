@@ -38,7 +38,7 @@ namespace ProyectoGasolinera.CLASES
             LitrosSolicitados = litrosSolicitados;
             LitrosDespachados = 0;
 
-            // Lógica corregida: -1 es tanque lleno
+            
             if (litrosSolicitados == -1)
             {
                 ConfiguracionBomba = "TANQUE LLENO";
